@@ -8,6 +8,7 @@
         - [Downloads](#downloading--extracting-source-files)
         - [Installing Boost](#build-and-install-boost)
         - [Installing nlohmann-json](#install-nlohmann-json)
+    - [Build Configuration](#build-configuration)
 - [License](#license)
 
 ## Getting Started
@@ -22,6 +23,8 @@ Installing Dependencies:
 sudo apt-get update
 sudo apt-get install build-essential
 sudo apt-get upgrade
+sudo apt-get install cmake
+sudo apt-get install g++
 ```
 
 \[Optional]
@@ -98,7 +101,7 @@ Boost: https://www.boost.org/users/download/ nholmann-json: https://github.com/n
 
 #### Install nlohmann-json
 
-- Copy the header file to `/usr/local/include`:
+- Copy the Header File to `/usr/local/include`:
 
     ```bash
     sudo mkdir -p /usr/local/include/nlohmann/
@@ -112,6 +115,24 @@ Boost: https://www.boost.org/users/download/ nholmann-json: https://github.com/n
     ```bash
     cat /usr/local/include/nlohmann/json.hpp | grep "NLOHMANN_JSON_VERSION"
     ```
+
+### Build Configuration
+
+- Create a Build Directory:
+
+    ```bash
+    mkdir build
+    cd build
+    ```
+
+- Run CMake to Configure the build:
+
+    ```bash
+    cmake ..
+    make
+    ```
+
+    **transmit** and **listen** executables will be created in the build directory.
 
 ## License
 
