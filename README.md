@@ -1,19 +1,24 @@
 # CBDC Transaction Processor
 
+Central Banking Digital Currency Transaction Processor.
+
 ## Table of Contents
 
-- [Getting Started](#getting-started)
+- [Development](#development)
     - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
+    - [Libraries](#libraries)
         - [Downloads](#downloading--extracting-source-files)
         - [Installing Boost](#build-and-install-boost)
         - [Installing nlohmann-json](#install-nlohmann-json)
     - [Build Configuration](#build-configuration)
+- [Deployment](#deployment)
 - [License](#license)
 
-## Getting Started
+## Development
 
-Instructions for Debian-based Linux Distributions.
+:exclamation: Instructions for Debian-based Linux Distributions.
+
+\[ Testing on Loopback Address to Simulate Network Communication \]
 
 ### Prerequisites
 
@@ -45,7 +50,7 @@ echo 'export PATH=$PATH:/path/to/vcpkg' >> ~/.bashrc
 
 Replace `/path/to/vcpkg` with the actual path to your vcpkg directory.
 
-### Installation
+### Libraries
 
 #### Downloading & Extracting Source Files:
 
@@ -133,6 +138,10 @@ Boost: https://www.boost.org/users/download/ nholmann-json: https://github.com/n
     ```
 
     **transmit** and **listen** executables will be created in the build directory.
+
+## Deployment
+
+
 
 ## License
 
