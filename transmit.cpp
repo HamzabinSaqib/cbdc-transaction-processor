@@ -47,11 +47,6 @@ int main() {
     ip::tcp::resolver resolver(io_service);
     ip::tcp::resolver::query query(LISTENER_IP, std::to_string(LISTENER_PORT));
 
-    // // Print the generated transactions
-    // for (const auto& transaction : transactions) {
-    //     std::cout << transaction << std::endl;
-    // }
-
     std::cout << "\nTransmitting " << TRANSACTIONS << " transactions to " << LISTENER_IP << ":" << LISTENER_PORT << std::endl << std::endl;
 
     // Connect to the listener and transmit each transaction
@@ -61,12 +56,6 @@ int main() {
 
         ip::tcp::socket socket(io_service);
         
-        // if (!socket.is_open()) {
-        //     ec = boost::system::errc::make_error_code(boost::system::errc::not_connected);
-        //     std::cerr << "Socket Creation Failed! Error Code: " << ec.value() << ". Message: " << ec.message() << "\n\n";
-        //     exit(EXIT_FAILURE);
-        // }
-        
         ip::tcp::resolver::iterator endpoint_iterator = resolver.resolve(query, ec);
 
         if (ec) {
@@ -74,7 +63,7 @@ int main() {
             exit(EXIT_FAILURE);
         }
 
-        // Connect to the receiver
+        // Connect to the listener
         boost::asio::connect(socket, endpoint_iterator, ec);
 
         if (ec) {
@@ -91,8 +80,6 @@ int main() {
             std::cerr << "Failed to Write Data: " << ec.message() << "\n\n";
             exit(EXIT_FAILURE);
         }
-
-        // std::cout << transaction << std::endl;
 
         // Shut down the socket
         socket.shutdown(ip::tcp::socket::shutdown_both, ec);
