@@ -1,21 +1,26 @@
 # CBDC Transaction Processor
 
+Central Banking Digital Currency Transaction Processor.
+
 ## Table of Contents
 
-- [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
+- [Development](#hammer_and_wrench-development)
+    - [Prerequisites](#package-prerequisites)
+    - [Libraries](#books-libraries)
         - [Downloads](#downloading--extracting-source-files)
         - [Installing Boost](#build-and-install-boost)
         - [Installing nlohmann-json](#install-nlohmann-json)
-    - [Build Configuration](#build-configuration)
-- [License](#license)
+    - [Build Configuration](#gear-build-configuration)
+- [Deployment](#rocket-deployment)
+- [License](#page_with_curl-license)
 
-## Getting Started
+## :hammer_and_wrench: Development
 
-Instructions for Debian-based Linux Distributions.
+:exclamation: Instructions for Debian-based Linux Distributions.
 
-### Prerequisites
+Testing on Loopback Address to Simulate Network Communication.
+
+### :package: Prerequisites
 
 Installing Dependencies:
 
@@ -45,14 +50,14 @@ echo 'export PATH=$PATH:/path/to/vcpkg' >> ~/.bashrc
 
 Replace `/path/to/vcpkg` with the actual path to your vcpkg directory.
 
-### Installation
+### :books: Libraries
 
 #### Downloading & Extracting Source Files:
 
 - Download the latest releases:\
-Boost: https://www.boost.org/users/download/ nholmann-json: https://github.com/nlohmann/json/releases
+Boost: [boost.org/users/download/](url) &nbsp; | &nbsp; nholmann-json: [github.com/nlohmann/json/releases](url)
 
-    The Source Code is usually available in a Compressed Archive Format (e.g., .zip, .tar.gz) like *boost_X_YY_Z.tar.gz* and *json-x.y.z.tar.gz*
+    The Source Code is usually available in a Compressed Archive Format (e.g., .zip, .tar.gz) like **boost_X_YY_Z.tar.gz** and **json-x.y.z.tar.gz**
 
 - Extract the Source Code Files:
 
@@ -116,7 +121,7 @@ Boost: https://www.boost.org/users/download/ nholmann-json: https://github.com/n
     cat /usr/local/include/nlohmann/json.hpp | grep "NLOHMANN_JSON_VERSION"
     ```
 
-### Build Configuration
+### :gear: Build Configuration
 
 - Create a Build Directory:
 
@@ -134,6 +139,10 @@ Boost: https://www.boost.org/users/download/ nholmann-json: https://github.com/n
 
     **transmit** and **listen** executables will be created in the build directory.
 
-## License
+## :rocket: Deployment
+
+
+
+## :page_with_curl: License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
