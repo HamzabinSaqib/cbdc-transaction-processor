@@ -55,7 +55,7 @@ Replace `/path/to/vcpkg` with the actual path to your vcpkg directory.
 
 #### Downloading & Extracting Source Files:
 
-- Download the latest releases: [Boost](https://www.boost.org/users/download/) &nbsp; | &nbsp; [nholmann-json](https://github.com/nlohmann/json/releases)
+- Download the latest releases: &nbsp; [Boost](https://www.boost.org/users/download/) &nbsp; | &nbsp; [nholmann-json](https://github.com/nlohmann/json/releases)
 
     The Source Code is usually available in a Compressed Archive Format (e.g., .zip, .tar.gz) like **boost_X_YY_Z.tar.gz** and **json-x.y.z.tar.gz**
 
@@ -150,7 +150,7 @@ The system can be readily tested on the Loopback address. Just set the **TRANSMI
 Test communication between VirtualBox VMs with a shared Host.
 
 - Add Host-Only Network Adapters to both VMs
-- Find the `enp0s3` network interface and check its IPv4 address as indicated by the **inet** tag. Use `ipconfig` or `ip addr show` to list the up interfaces.
+- Find the `enp0s3` network interface and check its IPv4 address as indicated by the **inet** tag. <br /> Use `ipconfig` or `ip addr show` to list the up interfaces.
   
 - Set the **LISTENER_IP** directive to the IP address of the target VM and the **TRANSMITTER_IP** directive to the IP address of the source VM.
 
