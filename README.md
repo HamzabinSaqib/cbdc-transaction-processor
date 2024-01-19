@@ -55,8 +55,7 @@ Replace `/path/to/vcpkg` with the actual path to your vcpkg directory.
 
 #### Downloading & Extracting Source Files:
 
-- Download the latest releases:\
-Boost: [boost.org/users/download/](url) &nbsp; | &nbsp; nholmann-json: [github.com/nlohmann/json/releases](url)
+- Download the latest releases: [Boost](https://www.boost.org/users/download/) &nbsp; | &nbsp; [nholmann-json](https://github.com/nlohmann/json/releases)
 
     The Source Code is usually available in a Compressed Archive Format (e.g., .zip, .tar.gz) like **boost_X_YY_Z.tar.gz** and **json-x.y.z.tar.gz**
 
