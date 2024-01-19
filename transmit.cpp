@@ -7,8 +7,8 @@
 using namespace boost::asio;
 using json = nlohmann::json;
 
-#define TRANSMITTER_IP "127.0.0.1"
-#define LISTENER_IP "127.0.0.1"
+#define TRANSMITTER_IP "192.168.56.101"
+#define LISTENER_IP "192.168.56.103"
 #define LISTENER_PORT 8888
 #define TRANSACTIONS 1000
 #define MIN 1 

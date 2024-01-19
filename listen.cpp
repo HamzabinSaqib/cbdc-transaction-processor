@@ -6,7 +6,7 @@
 using namespace boost::asio;
 using json = nlohmann::json;
 
-#define TRANSMITTER_IP "127.0.0.1"
+#define TRANSMITTER_IP "192.168.56.101"
 #define PORT 8888
 
 void handleConnection(ip::tcp::socket socket) {

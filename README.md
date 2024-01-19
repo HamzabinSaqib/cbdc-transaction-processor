@@ -11,14 +11,15 @@ Central Banking Digital Currency Transaction Processor.
         - [Installing Boost](#build-and-install-boost)
         - [Installing nlohmann-json](#install-nlohmann-json)
     - [Build Configuration](#gear-build-configuration)
+- [Testing](#bug-testing)
+    - [Virtual Machines](#computer-virtual-machines)
+        - [Shared Host](#shared-host)
 - [Deployment](#rocket-deployment)
 - [License](#page_with_curl-license)
 
 ## :hammer_and_wrench: Development
 
 :exclamation: Instructions for Debian-based Linux Distributions.
-
-Testing on Loopback Address to Simulate Network Communication.
 
 ### :package: Prerequisites
 
@@ -137,7 +138,24 @@ Boost: [boost.org/users/download/](url) &nbsp; | &nbsp; nholmann-json: [github.c
     make
     ```
 
-    **transmit** and **listen** executables will be created in the build directory.
+    Notice the **transmit** and **listen** executables in the build directory.
+
+## :bug: Testing
+
+The system can be readily tested on the Loopback address. Just set the **TRANSMITTER_IP** and **LISTENER_IP** directives in the source files to `127.0.0.1` and you should be able to simulate the network communication by running the executables in separate terminal windows.
+
+### :computer: Virtual Machines
+
+#### Shared Host
+
+Test communication between VirtualBox VMs with a shared Host.
+
+- Add Host-Only Network Adapters to both VMs
+- Find the `enp0s3` network interface and check its IPv4 address as indicated by the **inet** tag. Use `ipconfig` or `ip addr show` to list the up interfaces.
+  
+- Set the **LISTENER_IP** directive to the IP address of the target VM and the **TRANSMITTER_IP** directive to the IP address of the source VM.
+
+    :exclamation: Configuration might vary depending on the virtualization platform.
 
 ## :rocket: Deployment
 
